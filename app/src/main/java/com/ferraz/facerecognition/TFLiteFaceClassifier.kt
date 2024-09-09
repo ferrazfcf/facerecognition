@@ -45,7 +45,7 @@ class TFLiteFaceClassifier private constructor(
             val diff = emb1[i] - emb2[i]
             distance += diff * diff
         }
-        return sqrt(distance.toDouble()).toFloat()
+        return sqrt(distance)
     }
 
     override fun getFaceEmbeddings(bitmap: Bitmap): FloatArray {
